@@ -45,7 +45,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+beautiful.init(gears.filesystem.get_themes_dir() .. "theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
@@ -490,12 +490,12 @@ awful.rules.rules = {
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = true }
+      }, properties = { titlebars_enabled = false, border_color = "#4169e1" }
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
-    -- { rule = { class = "Firefox" },
-    --   properties = { screen = 1, tag = "2" } },
+    { rule = { class = "Firefox" },
+    properties = { opacity = 0.9 } },
 }
 -- }}}
 
@@ -559,7 +559,11 @@ client.connect_signal("mouse::enter", function(c)
     c:emit_signal("request::activate", "mouse_enter", {raise = false})
 end)
 
-client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
-client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+--[[client.connect_signal("manage", function (c)
+    c.shape = gears.shape.rounded_rect
+end)]]
+
+client.connect_signal("focus", function(c) c.border_color = "#4169e1" end)
+-- client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 awful.spawn.with_shell("nitrogen --restore")
