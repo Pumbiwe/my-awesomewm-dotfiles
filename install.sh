@@ -1,15 +1,12 @@
-sudo pacman -S telegram-desktop awesome git xterm nautilus alacritty nitrogen neovim discord polkit-gnome zsh neofetch --noconfirm
+sudo pacman -S telegram-desktop awesome git xterm nautilus alacritty nitrogen neovim discord polkit-gnome zsh neofetch lxappearance dpkg loupe --noconfirm
 
-mkdir ~/.config/awesome
-ln -s /etc/xdg/awesome/rc.lua ~/.config/awesome/rc.lua
-
-# Install paru
+# Install yay
 mkdir ~/tmp
-git clone https://aur.archlinux.org/paru.git ~/tmp
-(cd ~/tmp/paru && makepkg -si --noconfirm)
+git clone https://aur.archlinux.org/yay.git ~/tmp
+(cd ~/tmp/yay && makepkg -si --noconfirm)
 
-# Installing paru pkg
-paru ttf-iosevka-nerd --noconfirm
+# Installing paru pkgs
+yay -S ttf-iosevka-nerd catppuccin-cursors-mocha orchis-theme --noconfirm
 
 # sddm theme
 sudo git clone https://github.com/keyitdev/sddm-astronaut-theme.git /usr/share/sddm/themes/sddm-astronaut-theme
@@ -18,7 +15,11 @@ echo "[Theme]
 Current=sddm-astronaut-theme" | sudo tee /etc/sddm.conf
 
 # AwesomeWM theme
+mkdir ~/.config/awesome
 cp -r config/awesome ~/.config/awesome
+
+# Set wallpaper
+cp -r wallpaper ~/
 
 # Alacritty theme
 cp -r config/alacritty ~/.config/alacritty
@@ -33,4 +34,4 @@ curl https://raw.githubusercontent.com/gh0stzk/dotfiles/master/misc/firefox/chro
 curl https://raw.githubusercontent.com/gh0stzk/dotfiles/master/misc/firefox/chrome/userChrome.css -o ~/.mozilla/firefox/chrome/userChrome.css
 curl https://raw.githubusercontent.com/gh0stzk/dotfiles/master/misc/firefox/chrome/userContent.css -o ~/.mozilla/firefox/chrome/userContent.css
 
-echo "\n\n\nSuccessfully installed dotfiles! Have a nice day!"
+echo "Successfully installed dotfiles! Have a nice day!"
