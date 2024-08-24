@@ -1,4 +1,4 @@
-sudo pacman -S telegram-desktop sddm awesome git xterm nautilus alacritty nitrogen neovim discord polkit-gnome zsh neofetch lxappearance dpkg loupe --noconfirm
+sudo pacman -S telegram-desktop sddm awesome git xterm nautilus alacritty nitrogen neovim discord polkit-gnome zsh neofetch lxappearance dpkg qt6-5compat loupe --noconfirm
 
 # Install yay
 mkdir ~/tmp
@@ -16,7 +16,7 @@ Current=sddm-astronaut-theme" | sudo tee /etc/sddm.conf
 
 # AwesomeWM theme
 mkdir -p ~/.config/awesome
-cp -r config/awesome ~/.config/awesome
+cp -r config/awesome ~/.config/
 
 # Set wallpaper
 cp -r wallpaper ~/
