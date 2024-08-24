@@ -1,4 +1,4 @@
-sudo pacman -S telegram-desktop awesome git xterm nautilus alacritty nitrogen neovim discord polkit-gnome zsh neofetch lxappearance dpkg loupe --noconfirm
+sudo pacman -S telegram-desktop sddm awesome git xterm nautilus alacritty nitrogen neovim discord polkit-gnome zsh neofetch lxappearance dpkg loupe --noconfirm
 
 # Install yay
 mkdir ~/tmp
@@ -15,7 +15,7 @@ echo "[Theme]
 Current=sddm-astronaut-theme" | sudo tee /etc/sddm.conf
 
 # AwesomeWM theme
-mkdir ~/.config/awesome
+mkdir -p ~/.config/awesome
 cp -r config/awesome ~/.config/awesome
 
 # Set wallpaper
@@ -27,7 +27,7 @@ sudo echo "neofetch" >> ~/.zshrc
 
 # Firefox theme
 curl https://raw.githubusercontent.com/gh0stzk/dotfiles/master/misc/firefox/user.js -o ~/.mozilla/firefox/user.js
-mkdir ~/.mozilla/firefox/chrome
+mkdir -p ~/.mozilla/firefox/chrome
 curl https://raw.githubusercontent.com/gh0stzk/dotfiles/master/misc/firefox/chrome/add.svg -o ~/.mozilla/firefox/chrome/add.svg
 curl https://raw.githubusercontent.com/gh0stzk/dotfiles/master/misc/firefox/chrome/left-arrow.svg -o ~/.mozilla/firefox/chrome/left-arrow.svg
 curl https://raw.githubusercontent.com/gh0stzk/dotfiles/master/misc/firefox/chrome/right-arrow.svg -o ~/.mozilla/firefox/chrome/right-arrow.svg
