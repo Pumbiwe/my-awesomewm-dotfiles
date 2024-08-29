@@ -1,4 +1,4 @@
-sudo pacman -S telegram-desktop sddm awesome git xterm nautilus alacritty nitrogen neovim discord polkit-gnome zsh neofetch lxappearance dpkg qt6-5compat loupe --noconfirm
+sudo pacman -S telegram-desktop sddm awesome git xterm nautilus alacritty nitrogen vim neovim discord polkit-gnome zsh neofetch lxappearance dpkg qt6-5compat loupe --noconfirm
 
 # Install yay
 mkdir ~/tmp
@@ -6,7 +6,7 @@ git clone https://aur.archlinux.org/yay.git ~/tmp
 (cd ~/tmp/yay && makepkg -si --noconfirm)
 
 # Installing paru pkgs
-yay -S ttf-iosevka-nerd catppuccin-cursors-mocha orchis-theme --noconfirm
+yay -S ttf-iosevka-nerd catppuccin-cursors-mocha orchis-theme postman-bin jetbrains-toolbox --noconfirm
 
 # sddm theme
 sudo git clone https://github.com/keyitdev/sddm-astronaut-theme.git /usr/share/sddm/themes/sddm-astronaut-theme
