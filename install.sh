@@ -1,4 +1,4 @@
-sudo pacman -S telegram-desktop sddm awesome git xterm nautilus alacritty nitrogen vim neovim discord polkit-gnome zsh neofetch lxappearance dpkg qt6-5compat loupe --noconfirm
+sudo pacman -S telegram-desktop sddm awesome git xterm nautilus alacritty nitrogen vim neovim discord polkit-gnome rofi zsh neofetch lxappearance dpkg qt6-5compat loupe --noconfirm
 
 # Install yay
 mkdir ~/tmp
@@ -33,5 +33,9 @@ curl https://raw.githubusercontent.com/gh0stzk/dotfiles/master/misc/firefox/chro
 curl https://raw.githubusercontent.com/gh0stzk/dotfiles/master/misc/firefox/chrome/right-arrow.svg -o ~/.mozilla/firefox/chrome/right-arrow.svg
 curl https://raw.githubusercontent.com/gh0stzk/dotfiles/master/misc/firefox/chrome/userChrome.css -o ~/.mozilla/firefox/chrome/userChrome.css
 curl https://raw.githubusercontent.com/gh0stzk/dotfiles/master/misc/firefox/chrome/userContent.css -o ~/.mozilla/firefox/chrome/userContent.css
+
+# Rofi theme
+cp rofi/rounded-common.rasi ~/.local/share/rofi/themes/
+cp rofi/rounded-nord-dark.rasi ~/.local/share/rofi/themes/
 
 echo "Successfully installed dotfiles! Have a nice day!"
