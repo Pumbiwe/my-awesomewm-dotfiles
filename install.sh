@@ -37,6 +37,7 @@ curl https://raw.githubusercontent.com/gh0stzk/dotfiles/master/misc/firefox/chro
 curl https://raw.githubusercontent.com/gh0stzk/dotfiles/master/misc/firefox/chrome/userContent.css -o ~/.mozilla/firefox/chrome/userContent.css
 
 # Rofi theme
+mkdir -p ~/.local/share/rofi/themes
 cp rofi/rounded-common.rasi ~/.local/share/rofi/themes/
 cp rofi/rounded-nord-dark.rasi ~/.local/share/rofi/themes/
 
