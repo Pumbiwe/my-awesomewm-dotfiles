@@ -1,6 +1,7 @@
-![[screenshots/2024-09-12-125429_1360x768_scrot.png]]![[screenshots/2024-09-12-125420_1360x768_scrot.png]]![[screenshots/2024-09-12-125455_1360x768_scrot.png]]![[screenshots/2024-09-12-125504_1360x768_scrot.png]]
-
-
+![[2024-09-12-125429_1360x768_scrot.png]]
+![[2024-09-12-125420_1360x768_scrot.png]]
+![[2024-09-12-125455_1360x768_scrot.png]]
+![[2024-09-12-125504_1360x768_scrot.png]]
 # Installation
 > git clone https://github.com/Pumbiwe/my-awesomewm-dotfiles/
 > cd my-awesomewm-dotfiles
