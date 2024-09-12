@@ -1,4 +1,5 @@
-sudo pacman -S telegram-desktop sddm awesome git xterm nautilus alacritty nitrogen vim neovim discord polkit-gnome rofi zsh neofetch lxappearance dpkg qt6-5compat loupe --noconfirm
+sudo pacman -Syu
+sudo pacman -S telegram-desktop sddm awesome git xterm nautilus alacritty nitrogen vim neovim discord polkit-gnome rofi zsh neofetch lxappearance dpkg qt6-5compat loupe scrot cmake picom --noconfirm
 
 # Install yay
 mkdir ~/tmp
@@ -20,6 +21,7 @@ cp -r config/awesome ~/.config/
 
 # Set wallpaper
 cp -r wallpaper ~/
+nitrogen --set-auto ~/wallpaper/bg.png
 
 # Alacritty theme
 cp -r config/alacritty ~/.config/alacritty
@@ -37,5 +39,10 @@ curl https://raw.githubusercontent.com/gh0stzk/dotfiles/master/misc/firefox/chro
 # Rofi theme
 cp rofi/rounded-common.rasi ~/.local/share/rofi/themes/
 cp rofi/rounded-nord-dark.rasi ~/.local/share/rofi/themes/
+
+sudo echo "$(<etc.rc.lua )" > /etc/xdg/awesome/rc.lua
+
+xset -dpms
+xset s off
 
 echo "Successfully installed dotfiles! Have a nice day!"

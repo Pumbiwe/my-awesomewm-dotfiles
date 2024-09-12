@@ -23,6 +23,10 @@ local taglist_buttons = gears.table.join(
     awful.button({ }, 5, function(t) awful.tag.viewprev(t.screen) end)
 )
 
+local function isNumber(n)
+    return #n > 0 and n:match("[^%d]") == nil
+end
+
 
 
 awful.screen.connect_for_each_screen(function(s)
@@ -70,6 +74,28 @@ awful.screen.connect_for_each_screen(function(s)
 
     Separator = wibox.widget.separator({visible = false})
 
+    s.VolumeText = wibox.widget{
+    	align  = 'center',
+    	valign = 'center',
+    	widget = wibox.widget.textbox
+    }
+
+    awful.spawn.easy_async("pactl get-sink-volume @DEFAULT_SINK@", function(stdout, stderr, reason, exit_code)
+	    s.VolumeText.text = string.match(stdout, "  (%d+)") .. "%"
+    end)
+
+    s.VolumeText:connect_signal("button::press", function (self, lx, ly, button, mods, metadata)
+        if button == 1 then
+            awful.spawn.with_shell("pactl set-sink-volume @DEFAULT_SINK@ -5%")
+        elseif button == 3 then
+            awful.spawn.with_shell("pactl set-sink-volume @DEFAULT_SINK@ +5%")
+        end
+        
+        awful.spawn.easy_async("pactl get-sink-volume @DEFAULT_SINK@", function(stdout, stderr, reason, exit_code)
+            s.VolumeText.text = string.match(stdout, "  (%d+)") .. "%"
+        end)
+    end)
+
     s.Wibox = awful.wibar({ 
         position = "top",
         screen = s,
@@ -92,6 +118,7 @@ awful.screen.connect_for_each_screen(function(s)
         Separator,
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
+	    s.VolumeText,
             KeyboardLayout,
             --wibox.widget.systray(),
             Clock,
