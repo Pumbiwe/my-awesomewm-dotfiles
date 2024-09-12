@@ -3,8 +3,8 @@
 ![2024-09-12-125455_1360x768_scrot](https://github.com/user-attachments/assets/ab1c493b-fcac-422b-8930-dda1bd5e6e30)
 ![2024-09-12-125504_1360x768_scrot](https://github.com/user-attachments/assets/1d853ade-777a-4265-939d-caa61c1e8dbc)
 # Installation
-> git clone https://github.com/Pumbiwe/my-awesomewm-dotfiles/
-> cd my-awesomewm-dotfiles
+> git clone https://github.com/Pumbiwe/my-awesomewm-dotfiles/\n
+> cd my-awesomewm-dotfiles\n
 > ./install.sh
 
 
