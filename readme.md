@@ -40,3 +40,6 @@
 26. orchis-theme 
 27. postman-bin 
 28. jetbrains-toolbox
+29. firefox
+# Contacts
+Email: pumbiwedev@gmail.com
