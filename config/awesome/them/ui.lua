@@ -43,7 +43,7 @@ awful.screen.connect_for_each_screen(function(s)
     local Clock = wibox.widget{
         {
             widget = wibox.widget.textclock,
-            format = "%I:%M",
+            format = " | %I:%M",
             font = beautiful.font_var .. "Bold 12",
             valign = "center",
             align = "center"
@@ -122,6 +122,7 @@ awful.screen.connect_for_each_screen(function(s)
             layout = wibox.layout.fixed.horizontal,
 	    s.VolumeText,
             KeyboardLayout,
+	    s.LayoutBox,
             --wibox.widget.systray(),
             Clock,
             --s.LayoutBox,
