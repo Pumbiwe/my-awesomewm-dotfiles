@@ -52,7 +52,7 @@ awful.screen.connect_for_each_screen(function(s)
     }
     KeyboardLayout = awful.widget.keyboardlayout()
 
-     
+     gears.wallpaper.maximized(gears.filesystem.get_xdg_config_home() .. "/../wallpaper/bg.png", s)
      MainMenu = awful.menu({ items = { { "awesome", AwesomeMenu, beautiful.awesome_icon },
                                          { "open terminal", terminal },
                                          { "power off", "shutdown -h now" },
@@ -92,7 +92,9 @@ awful.screen.connect_for_each_screen(function(s)
         end
         
         awful.spawn.easy_async("pactl get-sink-volume @DEFAULT_SINK@", function(stdout, stderr, reason, exit_code)
-            s.VolumeText.text = string.match(stdout, "  (%d+)") .. "%"
+	    if string.match(stdout, "  (%d+)") ~= nil then
+            	s.VolumeText.text = string.match(stdout, "  (%d+)") .. "%"
+	    end
         end)
     end)
 
