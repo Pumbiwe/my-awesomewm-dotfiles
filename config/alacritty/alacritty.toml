@@ -1,5 +1,5 @@
-import = ["/home/pumbiwe/.config/alacritty/colors-material.toml"]
-live_config_reload = true
+general.import = ["/home/pumbiwe/.config/alacritty/colors-material.toml"]
+general.live_config_reload = true
 
 
 [colors]
@@ -45,7 +45,7 @@ multiplier = 3
 save_to_clipboard = true
 semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 
-[shell]
+[terminal.shell]
 program = "/usr/bin/zsh"
 
 [window]
