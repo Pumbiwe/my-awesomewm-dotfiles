@@ -24,7 +24,7 @@ cp -r wallpaper ~/
 nitrogen --set-auto ~/wallpaper/bg.png
 
 # Alacritty theme
-cp -r config/alacritty ~/.config/alacritty
+cp -r config/alacritty ~/.config
 sudo echo "neofetch" >> ~/.zshrc
 
 # Firefox theme
