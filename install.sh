@@ -1,5 +1,5 @@
 sudo pacman -Syu
-sudo pacman -S telegram-desktop sddm awesome git xterm nautilus alacritty nitrogen vim neovim discord polkit-gnome rofi zsh neofetch lxappearance dpkg qt6-5compat loupe scrot cmake picom firefox --noconfirm
+sudo pacman -S emacs telegram-desktop sddm awesome git xterm nautilus alacritty nitrogen vim neovim code polkit-gnome rofi zsh neofetch lxappearance dpkg qt6-5compat loupe scrot cmake picom firefox --noconfirm
 
 # Install yay
 mkdir ~/tmp
@@ -35,6 +35,9 @@ curl https://raw.githubusercontent.com/gh0stzk/dotfiles/master/misc/firefox/chro
 curl https://raw.githubusercontent.com/gh0stzk/dotfiles/master/misc/firefox/chrome/right-arrow.svg -o ~/.mozilla/firefox/chrome/right-arrow.svg
 curl https://raw.githubusercontent.com/gh0stzk/dotfiles/master/misc/firefox/chrome/userChrome.css -o ~/.mozilla/firefox/chrome/userChrome.css
 curl https://raw.githubusercontent.com/gh0stzk/dotfiles/master/misc/firefox/chrome/userContent.css -o ~/.mozilla/firefox/chrome/userContent.css
+
+# Spacemacs
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
 # Rofi theme
 mkdir -p ~/.local/share/rofi/themes
