@@ -103,8 +103,8 @@ awful.screen.connect_for_each_screen(function(s)
         screen = s,
         visible = true,
         type = "dock",
-        width = 1360 - beautiful.useless_gap * 4,
-        height = dpi(48),
+        width = awful.screen.focused().geometry.width - beautiful.useless_gap * 4,
+        height = awful.screen.focused().geometry.height / 16,
         shape       = helpers.rrect(beautiful.rounded - 5),
         bg          =  beautiful.bg_color,
     })
