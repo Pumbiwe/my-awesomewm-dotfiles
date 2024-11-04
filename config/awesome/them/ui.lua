@@ -81,7 +81,9 @@ awful.screen.connect_for_each_screen(function(s)
     }
     pcall(
     awful.spawn.easy_async("pactl get-sink-volume @DEFAULT_SINK@", function(stdout, stderr, reason, exit_code)
-	    s.VolumeText.text = string.match(stdout, "  (%d+)") .. "%"
+	    if string.match(stdout, " (%d+)") ~= nil then
+	    	s.VolumeText.text = string.match(stdout, "  (%d+)") .. "%"
+	    end
     end))
 
     s.VolumeText:connect_signal("button::press", function (self, lx, ly, button, mods, metadata)
