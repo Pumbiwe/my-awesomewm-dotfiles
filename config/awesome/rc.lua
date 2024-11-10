@@ -2,4 +2,4 @@ pcall (require, "luarocks.loader")
 
 
 require("config")
-require("them.init")
+require("dark-theme.init")

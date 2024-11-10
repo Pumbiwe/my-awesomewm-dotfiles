@@ -4,9 +4,9 @@ local dpi         = xresources.apply_dpi
 local gears       = require("gears")
 local gfs         = require("gears.filesystem")
 local themes_path = gfs.get_themes_dir()
-local ui_vars     = require("them.ui_vars")
-local helpers = require("them.helpers.init")
-local colors = require("them.dark")
+local ui_vars     = require("dark-theme.variables")
+local helpers = require("dark-theme.helpers.init")
+local colors = require("dark-theme.dark")
 
 
 local theme = {}
@@ -137,7 +137,7 @@ theme.tooltip_margin            = "top"
 theme.taglist_bg = theme.bg_color
 theme.taglist_bg_focus = theme.bg_3
 --theme.taglist_fg_focus = theme.accent
-theme.taglist_fg_focus = colors.green
+theme.taglist_fg_focus = colors.fg_color
 
 theme.taglist_bg_urgent = theme.bg_color
 theme.taglist_fg_urgent = theme.red_color
@@ -156,4 +156,4 @@ theme.awesome_dock_disabled = false
 theme.awesome_dock_spacing = 10
 theme.awesome_dock_timeout = 1.2
 require("beautiful").init(theme)
-require("them.ui")
+require("dark-theme.ui")

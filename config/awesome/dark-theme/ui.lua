@@ -3,7 +3,9 @@ local awful         = require("awful")
 local gears         = require("gears")
 local wibox         = require("wibox")
 local beautiful     = require("beautiful")
-local helpers       = require("them.helpers")
+local helpers       = require("dark-theme.helpers")
+require("dark-theme.volume-adjust")
+--local blingbling    = require("blingbling")
 local dpi           = beautiful.xresources.apply_dpi
 
 local taglist_buttons = gears.table.join(
@@ -36,8 +38,10 @@ local function updateVolume(s, value)
     return s.VolumeText.text
 end
 
+
 awful.screen.connect_for_each_screen(function(s)
 
+    local icon_dir = gears.filesystem.get_configuration_dir() .. "/icons/tags/mirage/"
     AwesomeMenu = {
         { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
         { "manual", terminal .. " -e man awesome" },
@@ -57,14 +61,17 @@ awful.screen.connect_for_each_screen(function(s)
         },
         layout = wibox.layout.fixed.horizontal
     }
+
     KeyboardLayout = awful.widget.keyboardlayout()
 
-     gears.wallpaper.maximized(gears.filesystem.get_xdg_config_home() .. "/../wallpaper/bg.jpg", s)
-     MainMenu = awful.menu({ items = { { "awesome", AwesomeMenu, beautiful.awesome_icon },
-                                         { "open terminal", terminal },
-                                         { "power off", "shutdown -h now" },
-     }})
-     Launcher = awful.widget.launcher({ image = beautiful.awesome_icon,
+    gears.wallpaper.maximized(gears.filesystem.get_xdg_config_home() .. "/../wallpaper/night.png", s)
+    MainMenu = awful.menu({ items = { 
+	    { "awesome", AwesomeMenu, beautiful.awesome_icon },
+	    { "open terminal", terminal },
+	    { "power off", "shutdown -h now" },
+    }})
+
+    Launcher = awful.widget.launcher({ image = beautiful.awesome_icon,
                                           menu = MainMenu })
     s.Prompt = awful.widget.prompt()
     s.LayoutBox = awful.widget.layoutbox(s)
@@ -87,44 +94,47 @@ awful.screen.connect_for_each_screen(function(s)
     	widget = wibox.widget.textbox
     }
 
+
+
     updateVolume(s, "+0%")
 
     s.VolumeText:connect_signal("button::press", function (self, lx, ly, button, mods, metadata)
+	--local value = updateVolume(s)
         if button == 1 then
             updateVolume(s, "-5%")
         elseif button == 3 then
             updateVolume(s, "+5%")
         end
+	--s.VolumeText.text = value .. "a"
     end)
 
     s.Wibox = awful.wibar({ 
-        position = "top",
+        position = "bottom",
         screen = s,
         visible = true,
         type = "dock",
-        width = awful.screen.focused().geometry.width - beautiful.useless_gap * 4,
+        width = awful.screen.focused().geometry.width,
         height = awful.screen.focused().geometry.height / 16,
-        shape       = helpers.rrect(beautiful.rounded - 5),
         bg          =  beautiful.bg_color,
     })
 
     s.Wibox:setup {
         layout = wibox.layout.align.horizontal,
-        { -- Left widgets
+        {
             layout = wibox.layout.fixed.horizontal,
             Launcher,
             s.TagList,
             s.Prompt,
+	    volume_bar,
+	    volume_adjust, 
         },
         Separator,
-        { -- Right widgets
+        {
             layout = wibox.layout.fixed.horizontal,
 	    s.VolumeText,
             KeyboardLayout,
 	    s.LayoutBox,
-            --wibox.widget.systray(),
             Clock,
-            --s.LayoutBox,
         },
     }
 

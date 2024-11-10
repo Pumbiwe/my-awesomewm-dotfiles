@@ -4,10 +4,12 @@
 local colors = {}
 
 -- foreground color
-colors.foreground      = "#ccd0d9"
+
+colors.foreground      = "#eceff4"
+colors.fg_color = "#5e81ac"
 
 -- backgrounds
-colors.bg_color         = "#101012"
+colors.bg_color         = "#101115"
 colors.bg_2             = "#161719"
 colors.bg_3             = "#1e1e21"
 
