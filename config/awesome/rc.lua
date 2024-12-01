@@ -1,5 +1,4 @@
 pcall (require, "luarocks.loader")
 
-
 require("config")
-require("dark-theme.init")
+require("modern-config.init")

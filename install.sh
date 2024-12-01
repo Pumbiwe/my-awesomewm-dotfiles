@@ -15,16 +15,11 @@ sudo cp /usr/share/sddm/themes/sddm-astronaut-theme/Fonts/* /usr/share/fonts/
 echo "[Theme]
 Current=sddm-astronaut-theme" | sudo tee /etc/sddm.conf
 
-# AwesomeWM theme
-mkdir -p ~/.config/awesome
-cp -r config/awesome ~/.config/
-
 # Set wallpaper
 cp -r wallpaper ~/
-nitrogen --set-auto ~/wallpaper/bg.png
 
-# Alacritty theme
-cp -r config/alacritty ~/.config
+# Themes
+cp -r config/* ~/.config
 sudo echo "neofetch" >> ~/.zshrc
 
 # Firefox theme
@@ -43,6 +38,9 @@ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 mkdir -p ~/.local/share/rofi/themes
 cp rofi/rounded-common.rasi ~/.local/share/rofi/themes/
 cp rofi/rounded-nord-dark.rasi ~/.local/share/rofi/themes/
+
+# Volume controller
+cp volumeControl /bin/
 
 sudo echo "$(<config/etc.rc.lua )" > /etc/xdg/awesome/rc.lua
 

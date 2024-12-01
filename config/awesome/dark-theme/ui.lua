@@ -54,8 +54,8 @@ awful.screen.connect_for_each_screen(function(s)
     local Clock = wibox.widget{
         {
             widget = wibox.widget.textclock,
-            format = " | %I:%M",
-            font = beautiful.font_var .. "Bold 12",
+            format = " | %H:%M",
+            font = beautiful.font_var,
             valign = "center",
             align = "center"
         },
@@ -64,7 +64,7 @@ awful.screen.connect_for_each_screen(function(s)
 
     KeyboardLayout = awful.widget.keyboardlayout()
 
-    gears.wallpaper.maximized(gears.filesystem.get_xdg_config_home() .. "/../wallpaper/night.png", s)
+    gears.wallpaper.maximized(gears.filesystem.get_xdg_config_home() .. "/../wallpaper/bg.jpg", s)
     MainMenu = awful.menu({ items = { 
 	    { "awesome", AwesomeMenu, beautiful.awesome_icon },
 	    { "open terminal", terminal },
@@ -83,7 +83,7 @@ awful.screen.connect_for_each_screen(function(s)
     s.TagList = awful.widget.taglist {
         screen  = s,
         filter  = awful.widget.taglist.filter.all,
-        buttons = taglist_buttons
+        buttons = taglist_buttons,
     }
 
     Separator = wibox.widget.separator({visible = false})
@@ -91,7 +91,8 @@ awful.screen.connect_for_each_screen(function(s)
     s.VolumeText = wibox.widget{
     	align  = 'center',
     	valign = 'center',
-    	widget = wibox.widget.textbox
+    	widget = wibox.widget.textbox,
+	font = beautiful.font_var
     }
 
 

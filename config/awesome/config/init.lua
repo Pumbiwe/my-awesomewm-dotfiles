@@ -9,8 +9,6 @@ local wibox = require("wibox")
 local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
-
--- beautiful.init("/home/pumbiwe/.config/awesome/theme/theming.lua")
 require("config.windowrules")
 require("config.keybindings")
 
@@ -44,7 +42,6 @@ awful.layout.layouts = {
     awful.layout.suit.fair,
     awful.layout.suit.max,
     awful.layout.suit.magnifier,
-    awful.layout.suit.max.fullscreen,
     awful.layout.suit.floating,
 }
 
@@ -74,19 +71,7 @@ local tasklist_buttons = gears.table.join(
                         end
 ))
 
-local function set_wallpaper(s)
-    if beautiful.wallpaper then
-        local wallpaper = beautiful.wallpaper
-        if type(wallpaper) == "function" then
-            wallpaper = wallpaper(s)
-        end
-        gears.wallpaper.maximized(wallpaper, s, true)
-    end
-end
-
---screen.connect_signal("property::geometry", set_wallpaper)
 awful.screen.connect_for_each_screen(function(s)
-    --set_wallpaper(s)
     awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
 end)
 
@@ -106,6 +91,8 @@ client.connect_signal("manage", function (c)
         awful.placement.no_offscreen(c)
     end
 end)
+
+
 client.connect_signal("request::titlebars", function(c)
     local buttons = gears.table.join(
         awful.button({ }, 1, function()
@@ -143,17 +130,18 @@ client.connect_signal("request::titlebars", function(c)
         layout = wibox.layout.align.horizontal
     }
 end)
+
+
 client.connect_signal("mouse::enter", function(c)
     c:emit_signal("request::activate", "mouse_enter", {raise = false})
 end)
+
 client.connect_signal("manage", function (c)
     c.shape = gears.shape.rounded_rect,
     c:struts({
-	    top = 35,
+	    top = 38,
 	    left = 10,
 	    right = 10,
-	    bottom = 10
+	    bottom = 0
     })
 end)
--- client.connect_signal("focus", function(c) c.border_color = "#4169e1" end)
--- client.connect_signal("unfocus", function(c) c.border_color = beautiful.bg_focus end)

@@ -6,10 +6,12 @@ local colors = {}
 -- foreground color
 
 colors.foreground      = "#eceff4"
-colors.fg_color = "#5e81ac"
+colors.fg_color = "#9fa6ac"
+--colors.fg_color = "#5e81ac"
 
 -- backgrounds
-colors.bg_color         = "#101115"
+--colors.bg_color         = "#101115"
+colors.bg_color = "#000"
 colors.bg_2             = "#161719"
 colors.bg_3             = "#1e1e21"
 
@@ -20,8 +22,8 @@ colors.green_2 = colors.green .. "99"
 colors.green_3 = "#1e2720"
 
 -- base red
---colors.red     = "#F2B8B5"
-colors.red = "#fc0202"
+colors.red     = "#F2B8B5"
+--colors.red = "#fc0202"
 colors.red_2    = "#F85E4D"
 colors.red_3 = "#F9DEDC"
 
