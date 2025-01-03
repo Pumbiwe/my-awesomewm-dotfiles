@@ -5,8 +5,8 @@ general.live_config_reload = true
 [colors]
 draw_bold_text_with_bright_colors = true
 
-[cursor]
-style = "Beam"
+[cursor.style]
+shape = "Beam"
 
 [env]
 TERM = "xterm-256color"
@@ -49,7 +49,7 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 program = "/usr/bin/zsh"
 
 [window]
-opacity = 1
+opacity = 0.8
 
 [window.padding]
 x = 30
