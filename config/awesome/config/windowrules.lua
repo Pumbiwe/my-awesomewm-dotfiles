@@ -22,7 +22,8 @@ awful.rules.rules = {
       ontop = false,
       sticky = false,
       maximized_horizontal = false,
-      maximized_vertical = false
+      maximized_vertical = false,
+      opacity = 0.8
     }
   },
   { 
