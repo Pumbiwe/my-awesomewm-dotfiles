@@ -5,7 +5,7 @@ local beautiful     = require("beautiful")
 local helpers       = require("modern-config.helpers")
 local dpi           = beautiful.xresources.apply_dpi
 
-local wallpaper = require("gears.filesystem").get_xdg_config_home() .. "/../wallpaper/win.jpg"
+local wallpaper = require("gears.filesystem").get_xdg_config_home() .. "/../wallpaper/blue.jpg"
 gears.wallpaper.maximized(wallpaper, s)
 
 
