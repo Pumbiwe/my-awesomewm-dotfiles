@@ -62,7 +62,7 @@ awful.screen.connect_for_each_screen(function(s)
             forced_width = dpi(202),
             widget  = wibox.container.margin
         },
-        border_color = beautiful.accent,
+        border_color = "#22232a",
         border_width = 2,
         placement    = awful.placement.top_left,
         shape        = gears.shape.rounded_rect,
@@ -85,7 +85,7 @@ awful.screen.connect_for_each_screen(function(s)
             forced_width = dpi((awful.client.focus.title or 0) * 9.5),
             widget  = wibox.container.margin
         },
-        border_color = beautiful.accent,
+        border_color = "#22232a",
         border_width = 2,
         placement    = awful.placement.top,
         shape        = gears.shape.rounded_rect,
@@ -132,7 +132,7 @@ awful.screen.connect_for_each_screen(function(s)
             forced_width = dpi(200),
             widget  = wibox.container.margin
         },
-        border_color = beautiful.accent,
+        border_color = "#22232a",
         border_width = 2,
         placement    = awful.placement.top_right,
         shape        = gears.shape.rounded_rect,
