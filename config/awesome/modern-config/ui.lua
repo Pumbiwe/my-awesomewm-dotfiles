@@ -69,27 +69,32 @@ awful.screen.connect_for_each_screen(function(s)
         visible      = true,
     }
 
+	
+    tasklist = awful.widget.tasklist { 
+        screen = s,
+        filter   = awful.widget.tasklist.filter.currenttags,
+        style    = {
+            border_width = 0,
+            bg_focus = "#00000000",
+            bg_normal = "#00000000",
+            fg_normal = "#fff",
+            font = beautiful.font_var .. "Medium Bold",
+            shape        = gears.shape.rounded_bar,
+        },
+    }
+    
     awful.popup {
         widget = {
-            {
-                {
-                    widget = wibox.widget.textbox,
-                    text = awful.client.focus.title,
-                    align  = 'center',
-                    valign = 'center',
-                    visible = true,
-                },
-                layout = wibox.layout.fixed.horizontal,
-            },
+	    tasklist,
             margins = 10,
-            forced_width = dpi((awful.client.focus.title or 0) * 9.5),
+            forced_width = dpi(500),
             widget  = wibox.container.margin
         },
         border_color = "#22232a",
         border_width = 2,
         placement    = awful.placement.top,
         shape        = gears.shape.rounded_rect,
-        visible      = awful.client.focus.title ~= nil,
+        visible      = awful.client.focus.title-- ~= nil,
     }
 
     local layoutbox = awful.widget.layoutbox(s)
