@@ -1,5 +1,5 @@
 sudo pacman -Syu
-sudo pacman -S emacs telegram-desktop sddm awesome git xterm nautilus alacritty nitrogen vim neovim code polkit-gnome rofi zsh neofetch lxappearance dpkg qt6-5compat loupe scrot cmake picom firefox --noconfirm
+sudo pacman -S emacs telegram-desktop sddm awesome git xterm nautilus alacritty nitrogen vim neovim code polkit-gnome rofi zsh neofetch lxappearance dpkg qt6-5compat qt5 loupe scrot cmake picom firefox --noconfirm
 
 # Install yay
 mkdir ~/tmp
