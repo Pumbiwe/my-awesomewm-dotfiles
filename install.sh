@@ -39,7 +39,7 @@ cp rofi/rounded-common.rasi ~/.local/share/rofi/themes/
 cp rofi/rounded-nord-dark.rasi ~/.local/share/rofi/themes/
 
 # Volume controller
-cp volumeControl /bin/
+sudo cp volumeControl /bin/
 
 sudo echo "$(<config/etc.rc.lua )" > /etc/xdg/awesome/rc.lua
 
