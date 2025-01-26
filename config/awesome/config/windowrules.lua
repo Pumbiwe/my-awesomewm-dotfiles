@@ -23,7 +23,7 @@ awful.rules.rules = {
       sticky = false,
       maximized_horizontal = false,
       maximized_vertical = false,
-      opacity = 0.8
+      opacity = 0.95
     }
   },
   { 
