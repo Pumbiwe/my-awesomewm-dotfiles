@@ -2,7 +2,7 @@ sudo pacman -Syu
 sudo pacman -S emacs telegram-desktop sddm awesome git xterm nautilus alacritty nitrogen vim neovim code polkit-gnome rofi zsh neofetch lxappearance dpkg qt6-5compat qt5 loupe scrot cmake picom firefox --noconfirm
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="test"/' ~/.zshrc
+sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="mrtazz"/' ~/.zshrc
 # Install yay
 mkdir ~/tmp
 git clone https://aur.archlinux.org/yay.git ~/tmp/yay
