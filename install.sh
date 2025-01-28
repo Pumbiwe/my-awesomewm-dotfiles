@@ -1,5 +1,5 @@
 sudo pacman -Syu
-sudo pacman -S emacs telegram-desktop sddm awesome git xterm nautilus alacritty nitrogen vim neovim code polkit-gnome rofi zsh neofetch lxappearance dpkg qt6-5compat qt5 loupe scrot cmake picom firefox --noconfirm
+sudo pacman -S telegram-desktop sddm awesome git nautilus alacritty nitrogen vim neovim code polkit-gnome rofi zsh neofetch lxappearance dpkg qt6-5compat qt5 loupe scrot cmake picom firefox --noconfirm
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="mrtazz"/' ~/.zshrc
@@ -9,7 +9,7 @@ git clone https://aur.archlinux.org/yay.git ~/tmp/yay
 (cd ~/tmp/yay && makepkg -si --noconfirm)
 
 # Installing paru pkgs
-yay -S ttf-iosevka-nerd catppuccin-cursors-mocha orchis-theme postman-bin jetbrains-toolbox --noconfirm
+yay -S ttf-iosevka-nerd catppuccin-cursors-mocha orchis-theme postman-bin --noconfirm
 
 # sddm theme
 sudo git clone https://github.com/kamack38/sddm-greenleaf-theme.git /usr/share/sddm/themes/greenleaf
