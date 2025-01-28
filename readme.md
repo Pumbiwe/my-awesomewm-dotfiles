@@ -1,5 +1,5 @@
 ![2025-01-28-175207_1360x768_scrot](https://github.com/user-attachments/assets/0e2dab9a-8989-4af2-a7ab-26b1536ad851)
-![2024-09-12-125420_1360x768_scrot](https://github.com/user-attachments/assets/b1bbca72-fefc-478f-8916-d5e6347f021f)
+![2025-01-28-175343_1360x768_scrot](https://github.com/user-attachments/assets/012b723a-cf64-4170-b6d8-9854fcc958ac)
 ![2024-09-12-125455_1360x768_scrot](https://github.com/user-attachments/assets/ab1c493b-fcac-422b-8930-dda1bd5e6e30)
 ![2024-09-12-125504_1360x768_scrot](https://github.com/user-attachments/assets/1d853ade-777a-4265-939d-caa61c1e8dbc)
 # Installation
