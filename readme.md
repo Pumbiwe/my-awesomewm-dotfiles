@@ -1,6 +1,6 @@
 ![2025-01-28-175207_1360x768_scrot](https://github.com/user-attachments/assets/0e2dab9a-8989-4af2-a7ab-26b1536ad851)
 ![2025-01-28-175343_1360x768_scrot](https://github.com/user-attachments/assets/012b723a-cf64-4170-b6d8-9854fcc958ac)
-![2024-09-12-125455_1360x768_scrot](https://github.com/user-attachments/assets/ab1c493b-fcac-422b-8930-dda1bd5e6e30)
+![2025-01-28-175451_1360x768_scrot](https://github.com/user-attachments/assets/3b88519b-603b-47c4-9340-f82a919f2376)
 ![2024-09-12-125504_1360x768_scrot](https://github.com/user-attachments/assets/1d853ade-777a-4265-939d-caa61c1e8dbc)
 # Installation
 > git clone https://github.com/Pumbiwe/my-awesomewm-dotfiles/<br/>
