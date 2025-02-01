@@ -37,8 +37,7 @@ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
 # Rofi theme
 mkdir -p ~/.local/share/rofi/themes
-cp rofi/rounded-common.rasi ~/.local/share/rofi/themes/
-cp rofi/rounded-nord-dark.rasi ~/.local/share/rofi/themes/
+cp rofi/spotlight-dark.rasi ~/.local/share/rofi/themes/
 
 # Volume controller
 sudo cp volumeControl /bin/
