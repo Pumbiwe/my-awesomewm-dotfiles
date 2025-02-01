@@ -12,7 +12,7 @@ local hotkeys = gears.table.join(
     end),
 
     awful.key({ modkey, }, "e", function()
-	    awful.util.spawn_with_shell("nautilus")
+	    awful.util.spawn_with_shell("ADW_DISABLE_PORTAL=1 nautilus")
     end),
 
     awful.key({modkey,},"s",hotkeys_popup.show_help,{description="show help", group="awesome"}),
