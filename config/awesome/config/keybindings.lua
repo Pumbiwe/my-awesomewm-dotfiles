@@ -90,7 +90,7 @@ local hotkeys = gears.table.join(
                   end
               end,
               {description = "restore minimized", group = "client"}),
-    awful.key({ modkey },            "r",     function () awful.spawn("rofi -show drun -theme ~/.local/share/rofi/themes/rounded-nord-dark") end,
+    awful.key({ modkey },            "r",     function () awful.spawn("rofi -show drun -theme ~/.local/share/rofi/themes/spotlight-dark") end,
               {description = "run prompt", group = "launcher"}),
 
     awful.key({ modkey }, "x",
