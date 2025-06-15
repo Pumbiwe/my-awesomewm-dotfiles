@@ -1,5 +1,4 @@
-sudo pacman -Syu
-sudo pacman -S telegram-desktop sddm awesome git nautilus alacritty nitrogen vim neovim code polkit-gnome rofi zsh neofetch lxappearance dpkg qt6-5compat qt5 loupe scrot cmake picom firefox debugedit make fakeroot gcc --noconfirm
+sudo pacman -Syu telegram-desktop sddm awesome git nautilus alacritty nitrogen vim neovim code polkit-gnome rofi zsh fastfetch lxappearance dpkg qt6-5compat qt5 loupe scrot cmake picom firefox debugedit make fakeroot gcc --noconfirm
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="mrtazz"/' ~/.zshrc
