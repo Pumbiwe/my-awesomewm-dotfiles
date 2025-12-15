@@ -38,6 +38,9 @@ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 mkdir -p ~/.local/share/rofi/themes
 cp rofi/spotlight-dark.rasi ~/.local/share/rofi/themes/
 
+# LazyVim
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+
 # Volume controller
 sudo cp volumeControl /bin/
 
